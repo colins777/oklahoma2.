@@ -1,0 +1,606 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+li
+	list-style-type: none
+ul
+	margin: 0
+	padding: 0
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+section
+	padding: 50px 0
+.container
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1
+	font-family: 'ImpactRegular', sans-serif
+	text-transform: uppercase
+	font-size: 50px
+	color: #fff
+
+.header
+	background-size: cover
+	background-repeat: no-repeat
+	height: 100vh
+	position: relative
+	&-title
+		position: absolute
+		top: 50%
+		left: 50%
+		background-color: rgba(82, 82, 73, .9)
+		padding: 5px
+		transform: translate(-50%, -50%)
+		&__inner
+			border: 1px solid #fff
+			padding: 20px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&__descr
+			font-size: 20px
+			color: $accent
+			text-align: center
+			letter-spacing: 1px
+			line-height: 25px
+			font-family: 'GothicBold', sans-serif
+			text-transform: uppercase
+
+//MOBILE MNU
+
+.top-mobile
+	position: fixed
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background-color: rgb(82, 82, 73)
+	padding: 15px
+	border-bottom: 1px solid #fff
+	z-index: 9999999
+	&-menu
+		display: none
+		position: absolute
+		top: 71px
+		left: 0
+		width: 100%
+		min-height: 200px
+		background-color: rgb(82, 82, 73)
+		z-index: 2
+	&__wrap
+		margin-top: 25px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		z-index: 999999
+	&__item
+		width: 100%
+		display: block
+		padding: 10px 0
+		border-bottom: 1px solid #625955
+		margin: 0 60px
+	&__link
+		color: #fff
+		font-family: 'Gothic', sans-serif
+		&:hover
+			text-decoration: none
+			color: #bebbbb
+	.logo
+		img
+			width: auto
+			height: 40px
+	.top-line__contacts
+		height: 14px
+	.mobile-btn-wrap
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		
+.sandwich
+	position: relative
+	top: -6px
+	width: 23px
+	z-index: 9999
+	display: block
+	&--active
+		.sandwich__line
+			&--top
+				top: 6px
+				transform: rotate(45deg)
+			&--middle
+				opacity: 0
+			&--bottom
+				top: 6px
+				transform: rotate(-45deg)
+	&__line
+		background-color: #fff
+		display: block
+		height: 2px
+		left: 0
+		position: absolute
+		transition: all linear .4s
+		width: 100%
+		&--top
+			top: 0
+		&--middle
+			top: 6px
+		&--bottom
+			top: 12px
+
+.top-line
+	background-color: rgba(82, 82, 73, .8)
+	padding: 10px 0
+	&__wrap
+		display: flex
+		justify-content: space-between
+	.logo
+		img
+			height: 60px
+			width: auto
+	&__contacts
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: 10px
+.phone
+	color: $accent
+	transition: all .3s ease
+	font-family: 'GothicBold', sans-serif
+	&:hover
+		color: #fff
+		text-decoration: none
+.top-menu
+	padding: 20px 0
+	&__wrap
+		display: flex
+	&__item
+		&:not(:last-child)
+			margin-right: 15px
+	&__link
+		color: #fff
+		transition: all .3s ease
+		&:hover
+			color: $accent
+			text-decoration: none
+			
+.company
+	&-s
+		padding: 100px 0
+	&-wrap
+		display: flex
+		height: 310px
+	&-left
+		width: 50%
+		&__img
+			img
+				width: 100%
+				height: 300px
+				object-fit: cover
+	&-right
+		position: relative
+		width: 50%
+		padding: 20px
+		&:before
+			content: ''
+			position: absolute
+			top: -40px
+			left: -100px
+			right: 0
+			bottom: 0
+			height: 130%
+			border: 4px solid $accent
+.about
+	&-s
+		background-color: #e7e7e7
+	&-title
+		font-size: 30px
+		text-transform: uppercase
+		color: #fff
+	&-inner
+		display: flex
+		justify-content: space-between
+		padding: 10px
+		border: 2px solid $accent-s
+		height: 100%
+		width: 100%
+	&-outer
+		position: relative
+		padding: 20px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 0 50%
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			//background-color: rgba(210, 197, 197, .8)
+			background-color: rgba(82, 82, 73, 0.7)
+	&-column
+		z-index: 99999
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 40%
+		&__adv
+			width: 20%
+			z-index: 99999
+			display: flex
+			flex-direction: column
+			justify-content: center
+			text-align: center
+	&-item
+		display: flex
+		align-items: center
+		position: relative
+		height: 80px
+		margin: 10px 0
+		padding: 10px
+		border-bottom: 1px solid $accent-s
+		border-top: 1px solid $accent-s
+		color: #fff
+		&__left
+			border-left: 1px solid $accent-s
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				right: 0
+				display: inline-block
+				width: 1px
+				height: 44%
+				background-color: $accent-s
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				display: inline-block
+				width: 1px
+				height: 37%
+				background-color: $accent-s
+		&__right
+			border-right: 1px solid $accent-s
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				display: inline-block
+				width: 1px
+				height: 44%
+				background-color: $accent-s
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				display: inline-block
+				width: 1px
+				height: 37%
+				background-color: $accent-s
+		&__text
+			//font-family: 'GothicBold', sans-serif
+			font-size: 16px
+			margin: 0
+	
+	&-arrow
+		position: absolute
+		top: 46%
+		border: solid $accent-s
+		border-width: 0 1px 1px 0
+		display: inline-block
+		padding: 5px
+		&__right
+			transform: translateY(-50%) rotate(-45deg)
+			right: -5px
+		&__left
+			transform: translateY(-50%) rotate(135deg)
+			left: -5px
+			
+			
+//HOUSES
+.houses
+	&-wrap
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		justify-content: space-between
+	&-item
+		display: block
+		width: 49%
+		margin-bottom: 40px
+		position: relative
+		overflow: hidden
+		&__img
+			display: block
+			position: relative
+			max-height: 450px
+			width: 100%
+			img
+				width: 100%
+				height: 450px
+				object-fit: cover
+			&:hover .houses-item__overlay
+				left: 0
+		&__overlay
+			padding: 10px
+			left: -90%
+			position: absolute
+			top: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(210, 197, 197, .8)
+			max-height: 450px
+			transition: all .3s ease
+			&-inner
+				border: 1px solid #fff
+				height: 100%
+				width: 100%
+		
+		&__btn
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			padding: 10px 20px
+			color: #fff
+			background-color: $accent
+			font-size: 18px
+			transition: all .3s ease
+		&__line
+			content: ''
+			height: 10px
+			width: 100%
+			background-color: $accent-s
+		&__descr
+			background-color: rgba(82, 82, 73, 0.9)
+		&__bottom
+			display: flex
+			align-items: center
+			justify-content: space-around
+			padding: 10px
+		&__title
+			h2
+				font-family: 'Gothic', sans-serif
+				color: $accent
+				text-transform: uppercase
+		&__spec
+			display: flex
+			align-items: center
+			&-wrap
+				display: flex
+				flex-direction: column
+				&:not(:last-child)
+					margin-right: 20px
+			&-name
+				font-size: 14px
+				color: #fff
+			
+
+.gallery
+	&-s
+		background-color: $grey
+
+.contacts
+	padding: 0
+	&-map
+		position: relative
+		height: 600px
+		width: 100%
+		.leaflet-popup
+			bottom: -39px!important
+			left: -78px!important
+		.button
+			color: #fff
+			font-family: 'Gothic', sans-serif
+		.phone
+			color: $accent
+			font-size: 16px
+		&__right
+			position: absolute
+			top: 0
+			right: 0
+			height: 100%
+			width: 40%
+			background-size: cover
+			background-repeat: no-repeat
+			z-index: 999
+		&__out
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 300px
+			height: 300px
+			background-color: rgba(82, 82, 73, 0.7)
+			padding: 15px
+			z-index: 999
+		&__inner
+			border: 2px solid #fff
+			height: 100%
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			h3
+				font-family: 'GothicBold', sans-serif
+				font-size: 22px
+				color: #fff
+				text-transform: uppercase
+		&__text
+			font-size: 12px
+			line-height: 18px
+			color: #fff
+			padding: 10px
+			text-align: center
+	
+.footer
+	background-color: rgba(18, 18, 18, 0.8)
+	padding: 20px 0
+	&-content
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+
+//FORM
+#callback
+	position: relative
+	display: flex
+	justify-content: center
+	flex-direction: column
+	padding: 20px 20px 6px 20px
+	background-color: rgba(82, 82, 73, 0.9)
+	max-width: 320px
+	margin: 0 auto
+	h3
+		color: $accent
+		text-align: center
+		text-transform: uppercase
+		font-family: 'ImpactRegular'
+	.mfp-close
+		position: absolute
+		top: -40px
+		right: -12px
+		color: #fbf9f9
+	input[type="text"], input[type="tel"], input[type="email"]
+		width: 100%
+		box-sizing: border-box
+		outline: none
+		border: none
+		padding: 10px
+		font-size: 14px
+		transition: all .3s ease
+		border-bottom: 1px solid #fff
+		background-color: rgba(82, 82, 73, 0.9)
+		&:active, &:focus
+			border-bottom: 2px solid $accent
+	input[type="submit"]
+		cursor: pointer
+		background-color: $accent
+		padding: 10px 20px
+		color: #fff
+		text-transform: uppercase
+		transition: all .3s ease-out
+		max-width: 320px
+		width: 100%
+		outline: none
+		&:hover
+			background-color: $grey
+			text-decoration: none
+			color: #fff
+	textarea
+		height: 100px
+		width: 100%
+	label
+		font-size: 14px
+		color: #fff
+div.wpcf7-mail-sent-ok
+	color: #fff
+	border: 2px solid $accent
+	text-align: center
+body input, body textarea
+	border: none
+
+	
+//UNIVERSAL BLOCKS
+.section-title
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+	&__main
+		color: $accent
+		font-size: 45px
+		letter-spacing: 2px
+		font-family: 'ImpactRegular', sans-serif
+		margin-right: 40px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 6px
+			right: -20px
+			width: 4px
+			height: 50px
+			background-color: $accent
+	
+	&__wrap
+		display: flex
+		flex-direction: column
+	&__small
+		display: block
+		text-transform: uppercase
+		font-size: 12px
+	&__name
+		display: block
+		text-transform: uppercase
+		font-size: 20px
+		font-family: 'GothicBold', sans-serif
+	&__simple
+		color: $accent
+		font-size: 45px
+		letter-spacing: 2px
+		font-family: 'ImpactRegular', sans-serif
+
+.button
+	padding: 10px 20px
+	color: #fff
+	background-color: $accent
+	font-size: 18px
+	transition: all .3s ease
+	&:hover
+		color: #fff
+		background-color: $grey
+		text-decoration: none
+	&-header
+		margin-top: 10px
+
+.spec__name
+	font-family: 'ImpactRegular', sans-serif
+	color: $accent
+	font-size: 20px
+
+	
+
+
+@import "media" // Always at the end
