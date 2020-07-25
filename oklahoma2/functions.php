@@ -1,12 +1,22 @@
 <?php
+
+define('OKLAHOMA_URL', get_template_directory_uri());
+
+define('OKLAHOMA_PATH', get_template_directory());
+
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts', 100 );
 function my_custom_scripts()
 {
 
-    wp_enqueue_script('minJs', get_template_directory_uri() . '/js/scripts.min.js');
+    wp_enqueue_script('minJs', OKLAHOMA_URL . '/js/scripts.min.js');
 
+    if(is_front_page()) {
+        wp_enqueue_script('leafletMap', OKLAHOMA_URL . '/libs/leaflet/leaflet.js');
 
-    wp_enqueue_style('slick-slider-css', get_template_directory_uri() . '/style.css');
+        wp_enqueue_script('leafletMapCustom', OKLAHOMA_URL . '/js/leaflet-custom.js', array('leafletMap'));
+    }
+
+    wp_enqueue_style('styles', OKLAHOMA_URL . '/style.css');
 
 }
 
@@ -33,3 +43,7 @@ add_filter('wpcf7_form_elements', function($content) {
 
     return $content;
 });
+
+// Add cottages
+require OKLAHOMA_PATH . '/inc/Cottages.php';
+new Oklahoma2\Cottages();

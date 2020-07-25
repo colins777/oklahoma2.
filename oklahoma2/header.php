@@ -12,19 +12,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Template Basic Images Start -->
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-    <!-- Template Basic Images End -->
-
     <!-- Custom Browsers Color Start -->
     <meta name="theme-color" content="#000">
     <!-- Custom Browsers Color End -->
 
 <?php wp_head();
 
-$imgLink = get_template_directory_uri() . '/img/';
+$imgLink = OKLAHOMA_URL . '/img/';
+
+if (is_front_page()) :
 
 ?>
 
@@ -45,7 +41,6 @@ $imgLink = get_template_directory_uri() . '/img/';
                     <li class="top-mobile__item"><a class="top-mobile__link" href="#anchor2">Переваги</a></li>
                     <li class="top-mobile__item"><a class="top-mobile__link" href="#anchor3">Будинки</a></li>
                     <li class="top-mobile__item"><a class="top-mobile__link" href="#anchor4">Галерея</a></li>
-<!--                    <li class="top-mobile__item"><a class="top-mobile__link" href="#anchor5">План містечка</a></li>-->
                     <li class="top-mobile__item"><a class="top-mobile__link" href="#anchor6">Контакти</a></li>
                 </ul>
             </nav> <!--top-menu-->
@@ -72,7 +67,6 @@ $imgLink = get_template_directory_uri() . '/img/';
                         <li class="top-menu__item"><a class="top-menu__link" href="#anchor2">Переваги</a></li>
                         <li class="top-menu__item"><a class="top-menu__link" href="#anchor3">Будинки</a></li>
                         <li class="top-menu__item"><a class="top-menu__link" href="#anchor4">Галерея</a></li>
-                        <!--<li class="top-menu__item"><a class="top-menu__link" href="#anchor5">План містечка</a></li>-->
                         <li class="top-menu__item"><a class="top-menu__link" href="#anchor6">Контакти</a></li>
                     </ul>
                 </nav> <!--top-menu-->
@@ -93,3 +87,38 @@ $imgLink = get_template_directory_uri() . '/img/';
         </div>
     </div>
 </head>
+
+<?php else :?>
+    <div class="header header--not-home">
+
+        <div class="top-mobile">
+            <div class="logo">
+                <?php the_custom_logo()?>
+            </div>
+
+            <div class="top-line__contacts">
+                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
+                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+            </div>
+        </div> <!--top-mobile-->
+
+        <div class="top-line">
+            <div class="container">
+                <div class="top-line__wrap">
+                    <div class="logo">
+                        <?php the_custom_logo()?>
+                    </div>
+
+                    <div class="top-line__contacts">
+                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
+                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+                    </div>
+                </div> <!--top-line__wrap-->
+            </div> <!--container-->
+        </div> <!--top-line-->
+
+    </div>
+    </head>
+
+<?php endif;?>
+

@@ -39,8 +39,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'oklahoma2/libs/jquery/dist/jquery.min.js',
-        'oklahoma2/libs/leaflet/leaflet.js',
+        //'oklahoma2/libs/leaflet/leaflet.js',
         'oklahoma2/libs/magnific-popup/dist/jquery.magnific-popup.js',
+        'oklahoma2/libs/slick-slider/slick.js',
 		'oklahoma2/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

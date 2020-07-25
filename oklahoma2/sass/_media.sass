@@ -40,16 +40,43 @@
 			flex-direction: column
 		&-item
 			width: 100%
+			
+	//Cottage page
+	.cottage
+		&-top
+			flex-direction: column
+		&-slider
+			width: 100%
+		&-param
+			margin-top: 30px
+			width: 80%
+		&-bottom
+			flex-direction: column
+			align-items: center
+		&-form
+			margin-top: 30px
+			order: 2
+			width: 100%
+		&-descr
+			order: 1
+			width: 80%
+
+		
 @media screen and (max-width: 480px)
 	.section-title__simple
 		font-size: 30px
 	.section-title
+		margin-top: 50px
 		&__main
-			font-size: 30px
+			font-size: 20px
+			&:after
+				height: 40px
+				top: -6px
 		&__name
-			font-size: 14px
+			font-size: 12px
 	.header
 		&-title
+			width: 80%
 			&__inner
 				h1
 					text-align: center
@@ -62,6 +89,8 @@
 			font-size: 14px
 			line-height: 16px
 			text-align: center
+		.phone
+			font-size: 14px
 	.about-item
 		height: auto
 		border: none
@@ -84,6 +113,8 @@
 			font-size: 12px
 		.spec__name
 			font-size: 16px
+		&__overlay
+			left: 0
 			
 	.contacts-map
 		&__text
@@ -104,4 +135,32 @@
 				font-size: 14px
 		.button
 			font-size: 14px
+
+	
+	.cottage
+		&-param
+			&__outer
+				min-height: auto
+			&__inner
+				min-height: auto
+			&__name
+				font-size: 16px
+			&__val
+				font-size: 18px
+				
+	.cottage-descr
+		&__plan
+			width: 100%
+			height: auto
+		.cottage-title-price__name
+			font-size: 25px
+		.cottage-title-price__val
+			font-size: 30px
+			display: block
+	.spider_popup_close_fullscreen
+		margin-top: 100px!important
+	.cottage
+		.slider-item
+			background-position: 50%
+			
 				
