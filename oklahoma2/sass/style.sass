@@ -55,6 +55,7 @@ h1
 .header
 	background-size: cover
 	background-repeat: no-repeat
+	background-position-y: 50%
 	height: 100vh
 	position: relative
 	&--not-home
@@ -337,6 +338,26 @@ h1
 		&__left
 			transform: translateY(-50%) rotate(135deg)
 			left: -5px
+
+.documents
+	padding: 30px 0 0 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&-title
+		font-size: 36px
+		color: $accent
+		font-family: 'ImpactRegular', sans-serif
+	&-item
+		color: #6d6d6d
+		font-size: 18px
+		font-family: 'GothicBold', sans-serif
+		font-weight: bold
+		&:not(:last-child)
+			margin-right: 20px
+		&:hover
+			color: #6d6d6d
 			
 			
 //HOUSES
@@ -490,6 +511,8 @@ h1
 //COTTAGE PAGE
 
 .cottage
+	&-wrap
+		margin-top: 50px
 	&-slider
 		width: 70%
 	.slider
@@ -497,13 +520,13 @@ h1
 			min-height: 500px
 			background-size: cover
 			width: 100%
+			background-position-y: 50%
 	&-top
 		display: flex
 		justify-content: space-between
 		align-items: center
 	&-param
 		width: 28%
-		margin-top: -35px
 		&__outer
 			min-height: 500px
 			padding: 10px
@@ -622,6 +645,8 @@ h1
 			button
 				&:before
 					opacity: .75
+.slick-dotted.slick-slider
+	margin-bottom: 0
 //UNIVERSAL BLOCKS
 .section-title
 	display: flex

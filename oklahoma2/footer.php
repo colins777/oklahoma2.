@@ -10,7 +10,7 @@
     </div>
 
     <div class="container">
-        <div class="footer-content"> КГ Oklahoma Cottage Town 2</div>
+        <div class="footer-content"><?php the_field('footer_copyright', 'options');?></div>
 
     </div>
 </div>

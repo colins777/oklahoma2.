@@ -4345,6 +4345,7 @@ h1 {
 .header {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: 50%;
   height: 100vh;
   position: relative;
 }
@@ -4836,6 +4837,48 @@ h1 {
   left: -5px;
 }
 
+.documents {
+  padding: 30px 0 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.documents-title {
+  font-size: 36px;
+  color: #e9bb4b;
+  font-family: 'ImpactRegular', sans-serif;
+}
+
+.documents-item {
+  color: #6d6d6d;
+  font-size: 18px;
+  font-family: 'GothicBold', sans-serif;
+  font-weight: bold;
+}
+
+.documents-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.documents-item:hover {
+  color: #6d6d6d;
+}
+
 .houses-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5093,6 +5136,10 @@ h1 {
   color: #fff;
 }
 
+.cottage-wrap {
+  margin-top: 50px;
+}
+
 .cottage-slider {
   width: 70%;
 }
@@ -5101,6 +5148,7 @@ h1 {
   min-height: 500px;
   background-size: cover;
   width: 100%;
+  background-position-y: 50%;
 }
 
 .cottage-top {
@@ -5120,7 +5168,6 @@ h1 {
 
 .cottage-param {
   width: 28%;
-  margin-top: -35px;
 }
 
 .cottage-param__outer {
@@ -5318,6 +5365,10 @@ h1 {
 
 .cottage-slider .my-dots .slick-active button:before {
   opacity: .75;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
 
 .section-title {
@@ -5612,6 +5663,9 @@ body input, body textarea {
 }
 
 @media screen and (max-width: 480px) {
+  section {
+    padding-top: 2px;
+  }
   .section-title__simple {
     font-size: 30px;
   }
@@ -5664,6 +5718,44 @@ body input, body textarea {
   }
   .about-item .about-arrow__left {
     display: none;
+  }
+  .documents {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .documents-title {
+    text-align: center;
+    line-height: 36px;
+  }
+  .documents-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .documents-item {
+    display: block;
+    text-align: center;
   }
   .houses-item__title h2 {
     font-size: 14px;
@@ -5719,15 +5811,24 @@ body input, body textarea {
     width: 100%;
     height: auto;
   }
-  .cottage-descr .cottage-title-price__name {
+  .cottage-descr__plan .image-popup img {
+    width: 100%;
+  }
+  .featherlight img {
+    width: 100%;
+  }
+  .featherlight .cottage-title-price__name {
     font-size: 25px;
   }
-  .cottage-descr .cottage-title-price__val {
+  .featherlight .cottage-title-price__val {
     font-size: 30px;
     display: block;
   }
   .spider_popup_close_fullscreen {
     margin-top: 100px !important;
+  }
+  .cottage-wrap {
+    margin-top: 100px;
   }
   .cottage .slider-item {
     background-position: 50%;

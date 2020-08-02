@@ -63,6 +63,8 @@
 
 		
 @media screen and (max-width: 480px)
+	section
+		padding-top: 2px
 	.section-title__simple
 		font-size: 30px
 	.section-title
@@ -103,6 +105,21 @@
 			display: none
 		.about-arrow__left
 			display: none
+	.documents
+		align-items: center
+		justify-content: center
+		&-title
+			text-align: center
+			line-height: 36px
+		&-wrap
+			display: flex
+			margin-top: 20px
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&-item
+			display: block
+			text-align: center
 	
 	.houses-item
 		&__title
@@ -135,8 +152,7 @@
 				font-size: 14px
 		.button
 			font-size: 14px
-
-	
+		
 	.cottage
 		&-param
 			&__outer
@@ -152,6 +168,12 @@
 		&__plan
 			width: 100%
 			height: auto
+			.image-popup
+				img
+					width: 100%
+	.featherlight
+		img
+			width: 100%
 		.cottage-title-price__name
 			font-size: 25px
 		.cottage-title-price__val
@@ -160,6 +182,8 @@
 	.spider_popup_close_fullscreen
 		margin-top: 100px!important
 	.cottage
+		&-wrap
+			margin-top: 100px
 		.slider-item
 			background-position: 50%
 			

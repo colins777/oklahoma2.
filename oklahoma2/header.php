@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!-- <base href="/"> -->
 
-    <title>OptimizedHTML 4</title>
+    <title><?php bloginfo();?></title>
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,11 +20,9 @@
 
 $imgLink = OKLAHOMA_URL . '/img/';
 
-if (is_front_page()) :
+if (is_front_page()) : ?>
 
-?>
-
-    <div class="header" style="background-image: url(<?php echo  $imgLink . 'header_bg2.jpg'?>)">
+    <div class="header" style="background-image: url(<?php the_field('header_banner', 'options');?>)">
 
         <div class="top-mobile">
             <div class="mobile-btn-wrap">
@@ -50,8 +48,12 @@ if (is_front_page()) :
             </div>
 
             <div class="top-line__contacts">
-                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
-                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+                <?php $allPhones = get_field('contacts_phones', 'options');
+                if ($allPhones) :
+                    foreach ($allPhones as $phone) : ?>
+                        <a class="phone"
+                           href="tel:<?php echo $phone['phone_number'] ?>"><?php echo $phone['phone_number'] ?></a>
+                    <?php endforeach; endif; ?>
             </div>
         </div> <!--top-mobile-->
 
@@ -71,8 +73,12 @@ if (is_front_page()) :
                     </ul>
                 </nav> <!--top-menu-->
                     <div class="top-line__contacts">
-                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
-                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+                        <?php $allPhones = get_field('contacts_phones', 'options');
+                        if ($allPhones) :
+                            foreach ($allPhones as $phone) : ?>
+                                <a class="phone"
+                                   href="tel:<?php echo $phone['phone_number'] ?>"><?php echo $phone['phone_number'] ?></a>
+                            <?php endforeach; endif; ?>
                     </div>
             </div> <!--top-line__wrap-->
             </div> <!--container-->
@@ -80,8 +86,8 @@ if (is_front_page()) :
 
         <div class="header-title">
             <div class="header-title__inner">
-                <h1>Oklahoma II</h1>
-                <p class="header-title__descr">Котеджне містечко</p>
+                <h1><?php the_field('banner_title', 'options');?></h1>
+                <p class="header-title__descr"><?php the_field('banner_text', 'options');?></p>
                 <a class="button button-header" href="#callback">Замовити дзвінок</a>
             </div>
         </div>
@@ -97,8 +103,12 @@ if (is_front_page()) :
             </div>
 
             <div class="top-line__contacts">
-                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
-                <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+                <?php $allPhones = get_field('contacts_phones', 'options');
+                if ($allPhones) :
+                    foreach ($allPhones as $phone) : ?>
+                        <a class="phone"
+                           href="tel:<?php echo $phone['phone_number'] ?>"><?php echo $phone['phone_number'] ?></a>
+                    <?php endforeach; endif; ?>
             </div>
         </div> <!--top-mobile-->
 
@@ -108,10 +118,13 @@ if (is_front_page()) :
                     <div class="logo">
                         <?php the_custom_logo()?>
                     </div>
-
                     <div class="top-line__contacts">
-                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (097) 99-87-006</a>
-                        <a class="phone" href="tel:+38 (050) 35-45-678">+38 (066) 03-38-999</a>
+                        <?php $allPhones = get_field('contacts_phones', 'options');
+                        if ($allPhones) :
+                            foreach ($allPhones as $phone) : ?>
+                                <a class="phone"
+                                   href="tel:<?php echo $phone['phone_number'] ?>"><?php echo $phone['phone_number'] ?></a>
+                            <?php endforeach; endif; ?>
                     </div>
                 </div> <!--top-line__wrap-->
             </div> <!--container-->

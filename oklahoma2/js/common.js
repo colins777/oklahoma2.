@@ -42,11 +42,9 @@ $(document).ready(function () {
         });
     };
 
-
-
     sandwich();
-  //  map();
     cottageSlider();
+
 
 	/*Popup*/
 

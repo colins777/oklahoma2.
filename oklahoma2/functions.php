@@ -44,6 +44,15 @@ add_filter('wpcf7_form_elements', function($content) {
     return $content;
 });
 
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+
+}
+
+
+
 // Add cottages
 require OKLAHOMA_PATH . '/inc/Cottages.php';
 new Oklahoma2\Cottages();
