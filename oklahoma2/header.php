@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!-- <base href="/"> -->
 
-    <title><?php bloginfo();?></title>
+    <title><?php bloginfo('name'); wp_title();?></title>
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -10,7 +10,7 @@
     </div>
 
     <div class="container">
-        <div class="footer-content"><?php the_field('footer_copyright', 'options');?></div>
+        <div class="footer-content"><p><?php the_field('footer_copyright', 'options');?></p></div>
 
     </div>
 </div>

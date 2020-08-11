@@ -8,7 +8,7 @@
                 center: [40, 0],
             }).setView([50.45499, 30.23283], 13);
 
-
+            map.scrollWheelZoom.disable();
             let myIcon = L.icon({
                 iconUrl: 'wp-content/themes/oklahoma2/images/marker-icon.png',
                 iconSize: [48, 48],

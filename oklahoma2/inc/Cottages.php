@@ -20,20 +20,20 @@ class Cottages
 
     public function register_cottage_post_type () {
         $labels = array(
-            'name' => _x('Котеджи', 'post type general name'),
-            'singular_name' => _x('Котедж', 'post type singular name'),
-            'menu_name' => _x('Котеджи', 'admin menu'),
-            'name_admin_bar' => _x('Котедж', 'add new on admin bar'),
-            'add_new' => _x('Добавить котедж', 'cottage'),
-            'add_new_item' => __('Добавить новый котедж'),
-            'new_item' => __('Новый котедж'),
-            'edit_item' => __('Редактировать котедж'),
-            'view_item' => __('Открыть котедж'),
-            'all_items' => __('Все котеджы'),
-            'search_items' => __('Найти котедж'),
-            'parent_item_colon' => __('Parent cottage:'),
-            'not_found' => __('Не найдено котеджей'),
-            'not_found_in_trash' => __('Не найдено котеджей в корзине')
+            'name' => _x('Котеджи', 'post type general name', 'oklahoma2'),
+            'singular_name' => _x('Котедж', 'post type singular name', 'oklahoma2'),
+            'menu_name' => _x('Котеджи', 'admin menu', 'oklahoma2'),
+            'name_admin_bar' => _x('Котедж', 'add new on admin bar', 'oklahoma2'),
+            'add_new' => _x('Добавить котедж', 'cottage', 'oklahoma2'),
+            'add_new_item' => __('Добавить новый котедж', 'oklahoma2'),
+            'new_item' => __('Новый котедж', 'oklahoma2'),
+            'edit_item' => __('Редактировать котедж', 'oklahoma2'),
+            'view_item' => __('Открыть котедж', 'oklahoma2'),
+            'all_items' => __('Все котеджы', 'oklahoma2'),
+            'search_items' => __('Найти котедж', 'oklahoma2'),
+            'parent_item_colon' => __('Parent cottage:', 'oklahoma2'),
+            'not_found' => __('Не найдено котеджей', 'oklahoma2'),
+            'not_found_in_trash' => __('Не найдено котеджей в корзине', 'oklahoma2')
         );
 
         $args = array(
